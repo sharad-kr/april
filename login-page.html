@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./login-page.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inria Serif:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="login-page">
+      
+      <b class="name"><span>Name </span><span class="span">*</span></b
+      ><b class="contact-no-container"
+        ><span>Contact No. </span><span class="span">*</span></b
+      ><b class="email-id-container"
+        ><span>Email Id </span><span class="span">*</span></b
+      ><b class="username"><span>Username </span><span class="span">*</span></b
+      ><b class="password"><span>Password </span><span class="span">*</span></b
+      ><b class="username1"><span>Username </span><span class="span">*</span></b
+      ><b class="login">Login</b>
+      <div class="sign-up">Sign Up</div>
+      <b class="password1"><span>Password </span><span class="span">*</span></b
+      ><b class="verify-password-container"
+        ><span>Verify Password </span><span class="span">*</span></b
+      >
+      <b class="genderlabel"
+        ><span>Gender </span><span class="span">*</span></b>
+        <b class="doblabel"
+        ><span>Date of Birth </span><span class="span">*</span></b>
+      <form class="forms" action="" method="post">
+      <input
+        class="login-page-item"
+        type="text" placeholder="Enter Name"
+        name="Name"
+        required
+      />
+      <input class="login-page-child5" type="text" placeholder="Enter Password" required name="Password"/><img
+        class="healthiconsui-user-profile"
+        alt=""
+        src="./public/healthiconsuiuserprofile.svg"
+      />
+      <button type="submit" class="ob-formslogin">
+        <div  class="name1">
+          <span class="login1">Login</span>
+        </div>
+      </button>
+      </form>
+      <img class="vertical-line" alt="" src="./public/line-1@2x.png" />
+      <form class ="forms" method="POST" action="">
+        <input class="login-page-inner" type="text" placeholder="Full Name" name="Full Name" required/>
+        <input
+        class="rectangle-input"
+        type="tel" placeholder="Enter Mobile Number" required
+        name="Enter Mobile Number"
+      />
+      <input class="dob" type="date" placeholder="Date of Birth" required id="formatofdob" name="Date of Birth" onkeyup="changeformat()"/>
+      <!-- <input class="gender"  placeholder="Select gender" /> -->
+      <select class="gender" required name="Select Gender">
+      <option value="">Select Gender…</option>
+      <option value="female">Female</option>
+      <option value="male">Male</option>
+      <input class="login-page-child1" type="email" placeholder="Enter a Valid Email" name="Enter a Valid Email" required/>
+      <input 
+        class="login-page-child2"
+        type="text" placeholder="Create Username"
+        required
+        name="Create Username" 
+      />
+      <input class="login-page-child3" type="text"  placeholder="Create Password" name="Create Password" required/>
+      <input
+        class="login-page-child4"
+        type="text" placeholder="Confirm Password"
+        name="Confirm Password"
+        required
+      />
+      <button type="submit" lass="ob-formssign-up">
+        <div class="name2">Sign up</div>
+      </button>
+      </form>
+      <nav class="nav-bar">
+        <div class="logo">
+          <img class="logo-child" alt="" src="./public/rectangle-1@2x.png" /><b
+            class="rktg-med"
+            ><span class="rktg"
+              ><span class="rktg1">RKTG</span><span class="span8"> </span></span
+            ><b class="med">MED</b></b
+          >
+        </div>
+        <div class="nav-buttons">
+          <div class="home" id="homeContainer">
+            <a class="about-us" href="/">Home</a>
+          </div>
+          <a
+            class="book-an-appointment"
+            href="./book-an-appointment.html"
+            id="bookAnAppointment"
+            >Book An Appointment</a
+          ><a class="book-an-appointment" href="./med-shop.html" id="medShop"
+            >MedShop</a
+          ><a class="about-us" href="./about-us.html">About Us</a
+          ><a
+            class="book-an-appointment"
+            href="./contact-us.html"
+            id="contactUs"
+            >Contact Us</a
+          ><b class="find-doctors">Find Doctors</b>
+        </div>
+        <img class="nav-bar-child" alt="" src="./public/line-1@2x.png" /><img
+          class="nav-bar-item"
+          alt=""
+          src="./public/line-2@2x.png"
+        />
+      </nav>
+    </div>
+
+    <script>
+      var homeContainer = document.getElementById("homeContainer");
+      if (homeContainer) {
+        homeContainer.addEventListener("click", function (e) {
+          window.location.href = "/";
+        });
+      }
+      
+      var bookAnAppointment = document.getElementById("bookAnAppointment");
+      if (bookAnAppointment) {
+        bookAnAppointment.addEventListener("click", function (e) {
+          window.location.href = "./book-an-appointment.html";
+        });
+      }
+      
+      var medShop = document.getElementById("medShop");
+      if (medShop) {
+        medShop.addEventListener("click", function (e) {
+          window.location.href = "./med-shop.html";
+        });
+      }
+      
+      var contactUs = document.getElementById("contactUs");
+      if (contactUs) {
+        contactUs.addEventListener("click", function (e) {
+          window.location.href = "./contact-us.html";
+        });
+      }
+
+      function changeformat(){
+      const dateInput = document.getElementById("formatofdob");
+      const date = new Date(); // replace this with your date
+      const formattedDate = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`;
+      dateInput.value = formattedDate;}
+      </script>
+      
+  </body>
+</html>
